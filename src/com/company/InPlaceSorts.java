@@ -42,8 +42,9 @@ public class InPlaceSorts {
                 if (list1[x] < currentMin)
                 {
                     minIndex = x;
+                    swap(list1, minIndex, pos);
                 }
-                swap(list1, minIndex, pos);
+
             }
         }
         System.out.println();
