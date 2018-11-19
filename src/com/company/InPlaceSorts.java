@@ -1,25 +1,6 @@
 package com.company;
 
 public class InPlaceSorts {
-    public String[] randomStringArr(int num, int length)
-    {
-        String [] arr = new String [num];
-        while (num > 0)
-        {
-            int i = 0;
-            String s = "";
-            while (i < length)
-            {
-                char c = (char) ((Math.random() * 26) + 97);
-                s = s + c;
-                i++;
-            }
-            num--;
-            arr[num] = s;
-        }
-        return arr;
-    }
-
     public static void swap(int[] list1, int i, int j)
     {
         int temp = list1[i];
@@ -27,14 +8,7 @@ public class InPlaceSorts {
         list1[j] = temp;
     }
 
-    public static void swapDouble(double[] list1, int i, int j)
-    {
-        double temp = list1[i];
-        list1[i] = list1[j];
-        list1[j] = temp;
-    }
-
-    public static void bubbleSwap(int[] list1)
+    public static void bubbleSort(int[] list1)
     {
         for (int i = 0; i < list1.length; i++)
         {
@@ -48,10 +22,10 @@ public class InPlaceSorts {
         }
     }
 
-    public static void selectionSort(double[] list1)
+    public static void selectionSort(int[] list1)
     {
         int pos = 0;
-        double currentMin = 0;
+        int currentMin = 0;
         for (int i = 0; i < list1.length; i++)
         {
             pos = i;
@@ -62,7 +36,7 @@ public class InPlaceSorts {
                 {
                     currentMin = x;
                 }
-                swapDouble(list1, (int)currentMin, pos);
+                swap(list1, currentMin, pos);
             }
         }
     }
