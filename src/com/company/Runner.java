@@ -15,17 +15,17 @@ public class Runner {
         long time = System.nanoTime();
         InPlaceSorts.bubbleSort(randIntArr);
         time = System.nanoTime() - time;
-        System.out.println("Time Taken: " + time);
+        System.out.println("Bubble Sort Time Taken: " + time);
 
         time = System.nanoTime();
         InPlaceSorts.selectionSort(randIntArr);
         time = System.nanoTime() - time;
-        System.out.println("Time Taken: " + time);
+        System.out.println("Selection Sort Time Taken: " + time);
 
         time = System.nanoTime();
         InPlaceSorts.insertionSort(randIntArr);
         time = System.nanoTime() - time;
-        System.out.println("Time Taken: " + time);
+        System.out.println("Insertion Sort Time Taken: " + time);
     }
 
     public static int[] randomIntArr(int num)
