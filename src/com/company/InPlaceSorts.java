@@ -20,13 +20,7 @@ public class InPlaceSorts {
                 }
             }
         }
-        System.out.println();
-        System.out.print("Bubble Sort: ");
-        for (int i = 0; i < list1.length; i++)
-        {
-            System.out.print(list1[i] + " ");
-        }
-        System.out.println();
+
     }
 
     public static void selectionSort(int[] list1)
@@ -47,13 +41,7 @@ public class InPlaceSorts {
 
             }
         }
-        System.out.println();
-        System.out.print("Selection Sort: ");
-        for (int i = 0; i < list1.length; i++)
-        {
-            System.out.print(list1[i] + " ");
-        }
-        System.out.println();
+
     }
 
     public static void insertionSort(int[] list1)
@@ -72,12 +60,37 @@ public class InPlaceSorts {
                 }
             }
         }
-        System.out.println();
-        System.out.print("Insertion Sort: ");
-        for (int i = 0; i < list1.length; i++)
+
+    }
+
+    public static void quickSort(int[] list1, int left, int right)
+    {
+        if (left < right)
         {
-            System.out.print(list1[i] + " ");
+            int pivot = Partition(list1, left, right);
+
+            quickSort(list1, left, pivot -1);
+            quickSort(list1, pivot+1, right);
         }
-        System.out.println();
+
+    }
+
+    public static int Partition(int[] list1, int left, int right)
+    {
+        int pivot = list1[right];
+        int i = left - 1;
+        for (int j = left; j < right; j++)
+        {
+            if (list1[j] <= pivot) {
+                i++;
+                int temp = list1[i];
+                list1[i] = list1[j];
+                list1[j] = temp;
+            }
+        }
+        int temp = list1[i + 1];
+        list1[i + 1] = list1[right];
+        list1[right] = temp;
+        return i + 1;
     }
 }

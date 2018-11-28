@@ -15,17 +15,50 @@ public class Runner {
         long time = System.nanoTime();
         InPlaceSorts.bubbleSort(randIntArr);
         time = System.nanoTime() - time;
+        System.out.println();
+        System.out.print("Bubble Sort: ");
+        for (int i = 0; i < randIntArr.length; i++)
+        {
+            System.out.print(randIntArr[i] + " ");
+        }
+        System.out.println();
         System.out.println("Bubble Sort Time Taken: " + time + " nanoseconds");
 
         time = System.nanoTime();
         InPlaceSorts.selectionSort(randIntArr);
         time = System.nanoTime() - time;
+        System.out.println();
+        System.out.print("Selection Sort: ");
+        for (int i = 0; i < randIntArr.length; i++)
+        {
+            System.out.print(randIntArr[i] + " ");
+        }
+        System.out.println();
         System.out.println("Selection Sort Time Taken: " + time + " nanoseconds");
 
         time = System.nanoTime();
         InPlaceSorts.insertionSort(randIntArr);
         time = System.nanoTime() - time;
+        System.out.println();
+        System.out.print("Insertion Sort: ");
+        for (int i = 0; i < randIntArr.length; i++)
+        {
+            System.out.print(randIntArr[i] + " ");
+        }
+        System.out.println();
         System.out.println("Insertion Sort Time Taken: " + time + " nanoseconds");
+
+        time = System.nanoTime();
+        InPlaceSorts.quickSort(randIntArr, 0, randIntArr.length - 1);
+        time = System.nanoTime() - time;
+        System.out.println();
+        System.out.print("Quick Sort: ");
+        for (int i = 0; i < randIntArr.length; i++)
+        {
+            System.out.print(randIntArr[i] + " ");
+        }
+        System.out.println();
+        System.out.println("Quick Sort Time Taken: " + time + " nanoseconds");
     }
 
     public static int[] randomIntArr(int num)
