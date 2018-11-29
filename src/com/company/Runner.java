@@ -8,7 +8,7 @@ public class Runner {
         String stringArr = "";
         for (int i = 0; i < randIntArr.length; i++)
         {
-            stringArr = stringArr + randIntArr[i] + ", ";
+            stringArr = stringArr + randIntArr[i] + " ";
         }
         System.out.println("Random Integer Array: " + stringArr);
 
